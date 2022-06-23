@@ -10,7 +10,8 @@ import { RateComponent } from './components/rate/rate.component';
   declarations: [
     AppComponent,
     RatesComponent,
-    RateComponent
+    RateComponent,
+
   ],
   imports: [
     BrowserModule,

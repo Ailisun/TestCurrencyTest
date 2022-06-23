@@ -1,1 +1,36 @@
 <app-rate *ngFor="let rate of rates" [rate]="rate"></app-rate>
+
+<table>
+
+  <tr>
+    <td>
+      <div class="inputWrapper">
+        <input type="number" name="fromInput" class="fromInput" placeholder="0.00" step="0.01" min="0"/>
+      </div>
+
+    <td>
+      <select name="drop_down" id="dropDownFrom" class="dropDowncls">
+      </select>
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+      <div class="inputWrapper">
+        <input type="number" name="toInput" class="toInput" placeholder="0.00" step="0.01" min="0" readonly/>
+      </div>
+
+    <td>
+      <select name="drop_down" id="dropDownTo" class="dropDowncls">
+      </select>
+    </td>
+
+  </tr>
+
+
+</table>
+
+<button class="convertButton">Convert</button>
+

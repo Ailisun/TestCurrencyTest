@@ -12,6 +12,6 @@ export class RatesService {
   constructor(private httpClient: HttpClient) { }
 
   getAll():Observable<IRate[]>{
-    return this.httpClient.get<IRate[]>(urls.rate)
+    return this.httpClient.get<IRate[]>(urls.rates)
   }
 }

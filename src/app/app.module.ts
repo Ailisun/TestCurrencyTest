@@ -1,21 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {Route, RouterModule} from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { HttpClientModule} from "@angular/common/http";
 import { RatesComponent } from './components/rates/rates.component';
 import { RateComponent } from './components/rate/rate.component';
+import { MainLayputComponent } from './layouts/main-layput/main-layput.component';
+import { HeaderComponent } from './components/header/header.component';
 
+
+const routes:Route[] = [
+  {path:'', component:MainLayputComponent, children:[
+      {path:'', redirectTo:'users', pathMatch:'full'},
+      {path:'', redirectTo:'rates', component:RatesComponent}
+    ]}
+]
 @NgModule({
   declarations: [
     AppComponent,
     RatesComponent,
     RateComponent,
+    MainLayputComponent,
+    HeaderComponent,
 
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

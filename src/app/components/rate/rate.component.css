@@ -1,0 +1,10 @@
+.dr_table_transparent th {
+  background-color: #6bb967 !important;
+  text-align: left;
+  font-size: 17px!important;
+  border: transparent !important;
+}
+.dr_table_transparent td {
+  border: transparent !important;
+  font-size: 16px;
+}

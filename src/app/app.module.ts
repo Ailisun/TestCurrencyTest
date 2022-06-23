@@ -12,8 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 
 const routes:Route[] = [
   {path:'', component:MainLayputComponent, children:[
-      {path:'', redirectTo:'users', pathMatch:'full'},
-      {path:'', redirectTo:'rates', component:RatesComponent}
+      {path:'', redirectTo:'rates', pathMatch:'full'},
+      {path:'rates', component:RatesComponent, children:[]}
     ]}
 ]
 @NgModule({

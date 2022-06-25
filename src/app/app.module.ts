@@ -8,6 +8,7 @@ import { RatesComponent } from './components/rates/rates.component';
 import { RateComponent } from './components/rate/rate.component';
 import { MainLayputComponent } from './layouts/main-layput/main-layput.component';
 import { HeaderComponent } from './components/header/header.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 const routes:Route[] = [
@@ -28,7 +29,8 @@ const routes:Route[] = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

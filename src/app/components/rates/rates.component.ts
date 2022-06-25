@@ -9,11 +9,22 @@ import {RatesService} from "../../services/rates.service";
 })
 export class RatesComponent implements OnInit {
  rates:IRate[];
+ amount = 1
+  rate= 28
 
-  constructor(private rateService: RatesService) { }
+ convert():number{
+   return this.amount * this.rate;
+ }
+
+    constructor(private rateService: RatesService) {
+
+
+    }
 
   ngOnInit(): void {
     this.rateService.getAll().subscribe(value => {this.rates = value})
+
   }
+
 
 }

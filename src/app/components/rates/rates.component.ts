@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IRate} from "../../interfaces";
+import {IRate, IRates} from "../../interfaces";
 import {RatesService} from "../../services/rates.service";
 
 @Component({
@@ -8,13 +8,18 @@ import {RatesService} from "../../services/rates.service";
   styleUrls: ['./rates.component.css']
 })
 export class RatesComponent implements OnInit {
- rates:IRate[];
- amount = 1
-  rate= 28
+ rates:IRates[];
+ rate:IRate
+  from: any;
+  to: any;
+  amount: number;
+  result: number;
 
- convert():number{
-   return this.amount * this.rate;
- }
+  onConvert(): void {
+    if (this.rate){
+      this.result = this.amount * this.rate.rate;
+    }
+  }
 
     constructor(private rateService: RatesService) {
 

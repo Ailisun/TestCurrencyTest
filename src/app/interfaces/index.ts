@@ -1,1 +1,1 @@
-export * from './IRate'
+export * from './IRates'

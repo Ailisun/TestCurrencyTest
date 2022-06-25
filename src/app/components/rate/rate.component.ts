@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IRate} from "../../interfaces";
+import {IRates} from "../../interfaces";
 
 @Component({
   selector: 'app-rate',
@@ -9,7 +9,7 @@ import {IRate} from "../../interfaces";
 export class RateComponent implements OnInit {
 
   @Input()
-  rate: IRate
+  rate: IRates
   constructor() { }
 
   ngOnInit(): void {

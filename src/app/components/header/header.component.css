@@ -2,13 +2,17 @@
   height: 50px;
   background-color: darkseagreen;
   font-size: 20px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   padding: 0 20%;
 }
 
 a{
   text-decoration: none;
   color: snow;
+  margin-right: 30px;
+}
+
+.flex{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
